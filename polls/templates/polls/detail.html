@@ -1,0 +1,10 @@
+<!-- Pega o texto da question e coloca no h1 -->
+<h1>{{ question.question_text }}</h1>
+<!-- Cria uma lista-->
+<ul>
+<!-- Para cada choice acossiada a question -->
+{% for choice in question.choice_set.all %}
+    <!-- Pega o texto de cada choice associada a essa question e põe na lista -->
+    <li>{{ choice.choice_text }}</li>
+{% endfor %}<!-- Fim do for -->
+</ul><!-- Fim da lista -->
