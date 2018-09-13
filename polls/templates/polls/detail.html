@@ -1,10 +1,18 @@
 <!-- Pega o texto da question e coloca no h1 -->
 <h1>{{ question.question_text }}</h1>
-<!-- Cria uma lista-->
-<ul>
-<!-- Para cada choice acossiada a question -->
+<!-- Caso um erro seja lançado, imprime o texto do erro em negrito, tag <strong> -->
+{% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
+<!-- Início do formulário -->
+<form action="{% url 'polls:vote' question.id %}" method="post">
+<!-- Usa a tag de template {% csrf_token%} para prevenir ataques Cross Site Request Forgeries -->
+{% csrf_token %}
+<!-- Para cada choice associada a essa question -->
 {% for choice in question.choice_set.all %}
-    <!-- Pega o texto de cada choice associada a essa question e põe na lista -->
-    <li>{{ choice.choice_text }}</li>
-{% endfor %}<!-- Fim do for -->
-</ul><!-- Fim da lista -->
+    <!-- exibe um botão radio para cada opção da enquete associado ao ID da choice-->
+    <input type="radio" name="choice" id="choice{{ forloop.counter }}" value="{{ choice.id }}" />
+    <!-- forloop.counter indica quantas vezes a tag for passou pelo laço -->
+    <label for="choice{{ forloop.counter }}">{{ choice.choice_text }}</label><br />
+{% endfor %}
+<!-- Envia por POST o dado choice=#, onde o # é o ID da choice selecionada pra votar --> 
+<input type="submit" value="Vote" />
+</form>
