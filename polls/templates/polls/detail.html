@@ -3,7 +3,7 @@
 <!-- Caso um erro seja lançado, imprime o texto do erro em negrito, tag <strong> -->
 {% if error_message %}<p><strong>{{ error_message }}</strong></p>{% endif %}
 <!-- Início do formulário -->
-<form action="{% url 'polls:vote' question.id %}" method="post">
+<form action="{% url 'vote' question.id %}" method="post">
 <!-- Usa a tag de template {% csrf_token%} para prevenir ataques Cross Site Request Forgeries -->
 {% csrf_token %}
 <!-- Para cada choice associada a essa question -->
