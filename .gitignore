@@ -1,7 +1,7 @@
 *.pyc
 *~
-mysite/__pycache__/*
-polls/__pycache__/*
+__pycache__/
+
 myvenv
 db.sqlite3
 /static
