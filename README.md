@@ -29,12 +29,3 @@ Getting Started Initial Setup
 	Open website in browser at:
 		http://localhost:8000/polls or admin at http://localhost:8000/admin (admin:admin)
 
-After initial setup
-
-	Activate the virtualenv: 
-		source env/bin/activate
-	Run the server: 
-		python manage.py runserver
-	Open website in browser at:
-		http://localhost:8000/polls or admin at http://localhost:8000/admin (admin:admin)
-
