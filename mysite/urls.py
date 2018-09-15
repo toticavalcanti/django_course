@@ -14,7 +14,7 @@ Including another URLconf
     2. Add a URL to urlpatterns:  path('blog/', include('blog.urls'))
 """
 from django.urls import path
-
+from django.contrib import admin
 from polls import views
 
 app_name = 'polls'
@@ -25,4 +25,3 @@ urlpatterns = [
     path('<int:question_id>/results/', views.results, name='results'),
     path('<int:question_id>/vote/', views.vote, name='vote'),
 ]
-
