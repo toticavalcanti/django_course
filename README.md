@@ -6,9 +6,8 @@ Instructions in portuguese:
 	http://www.codigofluente.com.br/programacao-web-com-django/
 
 Getting Started Initial Setup
-    
+	
 	Make a new virtualenv:
- 
 		sudo apt install virtualenv
 		virtualenv -p python3.6 EnvironmentName
 
