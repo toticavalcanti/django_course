@@ -1,4 +1,4 @@
+__pycache__/
 *.pyc
-.DS_Store
-.git
-.project
+buildSite/.DS_Store
+*.DS_Store
