@@ -13,7 +13,7 @@ Getting Started Initial Setup
 	Make a new virtualenv:
 		virtualenv -p python3.6 EnvironmentName
 
-		Activate the virtualenv: 
+	Activate the virtualenv: 
 		source EnvironmentName/bin/activate
 
     Install Django: 
