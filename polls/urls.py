@@ -15,7 +15,7 @@ Including another URLconf
 """
 from django.urls import path
 from django.contrib import admin
-from polls import views
+from . import views
 
 app_name = 'polls'
 urlpatterns = [
