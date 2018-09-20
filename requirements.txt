@@ -7,7 +7,7 @@ django-flat-responsive==2.0
 django-flat-theme==1.1.4
 django-polls==0.1
 gunicorn==19.9.0
-pkg-resources==0.0.0
+#pkg-resources==0.0.0
 psycopg2==2.7.5
 pytz==2018.5
     
