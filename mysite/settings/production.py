@@ -13,19 +13,19 @@ https://docs.djangoproject.com/en/dev/ref/settings/
 import os
 
 # Build paths inside the project like this: os.path.join(BASE_DIR, ...)
-BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
+BASE_DIR = os.path.dirname(os.path.dirname(os.path.dirname(os.path.abspath(__file__))))
 
 
 # Quick-start development settings - unsuitable for production
 # See https://docs.djangoproject.com/en/dev/howto/deployment/checklist/
 
 # SECURITY WARNING: keep the secret key used in production secret!
-SECRET_KEY = '&^cby$$v@)@sl*xh03kw(w5bp&b3x#9g=-(l5a4zu$%qn%3ga-'
+SECRET_KEY = os.environ.get(SECRET_KEY, '&^cby$$v@)@sl*xh03kw(w5bp&b3x#9g=-(l5a4zu$%qn%3ga-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = True
+DEBUG = False
 
-ALLOWED_HOSTS = []
+ALLOWED_HOSTS = ['0.0.0.0', 'localhost','polls-research.herokuapp.com', '.polls.com']
 
 
 # Application definition
@@ -75,16 +75,21 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 # https://docs.djangoproject.com/en/dev/ref/settings/#databases
 
 DATABASES = {
-    'default': {
-        'ENGINE': 'django.db.backends.mysql', 
-        'NAME': 'db_mysite',
-        'USER': 'django',
-        'PASSWORD': '123456',
-        'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
-        'PORT': '3306',
-    }
+    # 'default': {
+    #     'ENGINE': 'django.db.backends.mysql', 
+    #     'NAME': 'db_mysite',
+    #     'USER': 'django',
+    #     'PASSWORD': '123456',
+    #     'HOST': 'localhost',   # Or an IP Address that your DB is hosted on
+    #     'PORT': '3306',
+    # }
 }
 
+# add this
+import dj_database_url
+db_from_env = dj_database_url.config()
+DATABASES['default'].update(db_from_env)
+#DATABASES['default']['CONN_MAX_AGE'] = 500
 
 # Password validation
 # https://docs.djangoproject.com/en/dev/ref/settings/#auth-password-validators
