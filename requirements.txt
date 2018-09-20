@@ -1,11 +1,11 @@
 dj-database-url==0.5.0
 -e git://github.com/django/django.git@57fd3700d4f5a7887ad3967fe19b61bc9f25b2f3#egg=Django
--e git://github.com/toticavalcanti/curso_django/tree/master/django-polls/dist#egg=django-polls
+#-e git://github.com/toticavalcanti/curso_django/tree/master/django-polls/dist#egg=django-polls
 django-admin-interface==0.7.0
 django-colorfield==0.1.15
 django-flat-responsive==2.0
 django-flat-theme==1.1.4
-#django-polls==0.1
+django-polls==0.1
 gunicorn==19.9.0
 pkg-resources==0.0.0
 psycopg2==2.7.5
