@@ -1,4 +1,6 @@
 *.sqlite3
+/*.sqlite3
+/*.sqlite3-journal
 mysite/settings/local.py
 .DS_Store
 bin/
