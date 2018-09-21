@@ -1,7 +1,5 @@
 dj-database-url==0.5.0
 -e git://github.com/django/django.git@57fd3700d4f5a7887ad3967fe19b61bc9f25b2f3#egg=Django
-pip install --upgrade pip
-pip install ~/django-polls/dist/django-polls-0.1.tar.gz
 django-admin-interface==0.7.0
 django-colorfield==0.1.15
 django-flat-responsive==2.0
