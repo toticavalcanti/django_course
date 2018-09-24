@@ -19,7 +19,7 @@ class Question(models.Model):
     was_published_recently.short_description = 'Published recently?'
 
 class Choice(models.Model):
-    question = models.ForeignKey(Question, on_delete=models.CASCADE)
+    question = models.ForeignKey(Question, on_delete=models.PROTECT)
     choice_text = models.CharField(max_length=200)
     votes = models.IntegerField(default=0)
     def __str__(self):
