@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = os.environ.get('SECRET_KEY', '&^cby$$v@)@sl*xh03kw(w5bp&b3x#9g=-(l5a4zu$%qn%3ga-')
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ['0.0.0.0', 'localhost','polls-research.herokuapp.com', '.polls.com']
 
