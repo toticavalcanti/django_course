@@ -1,4 +1,4 @@
 from django.apps import AppConfig
 
 class PollsConfig(AppConfig):
-    name = 'polls.apps'
+    name = 'django-polls'
