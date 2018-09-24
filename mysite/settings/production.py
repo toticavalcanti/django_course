@@ -31,7 +31,7 @@ ALLOWED_HOSTS = ['0.0.0.0', 'localhost','polls-research.herokuapp.com', '.polls.
 # Application definition
 
 INSTALLED_APPS = [
-    'django-polls.PollsConfig',
+    'django-polls',
     'django.contrib.admin',
     'django.contrib.auth',
     'django.contrib.contenttypes',
