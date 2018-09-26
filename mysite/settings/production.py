@@ -25,7 +25,7 @@ SECRET_KEY = os.environ.get('SECRET_KEY', '&^cby$$v@)@sl*xh03kw(w5bp&b3x#9g=-(l5
 # SECURITY WARNING: don't run with debug turned on in production!
 DEBUG = True
 
-ALLOWED_HOSTS = ['127.0.0.1', 'localhost','polls-research.herokuapp.com', '.polls.com']
+ALLOWED_HOSTS = ['toticavalcanti.pythonanywhere.com', '127.0.0.1', 'localhost','polls-research.herokuapp.com', '.polls.com']
 
 
 # Application definition
@@ -76,7 +76,7 @@ WSGI_APPLICATION = 'mysite.wsgi.application'
 
 DATABASES = {
     # 'default': {
-    #     'ENGINE': 'django.db.backends.mysql', 
+    #     'ENGINE': 'django.db.backends.mysql',
     #     'NAME': 'db_mysite',
     #     'USER': 'django',
     #     'PASSWORD': '123456',
@@ -128,14 +128,15 @@ USE_L10N = True
 USE_TZ = True
 
 
+STATIC_URL = '/static/'
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/dev/howto/static-files/
 # Static files (CSS, JavaScript, Images)
 # https://docs.djangoproject.com/en/1.9/howto/static-files/
-STATIC_ROOT = os.path.join(BASE_DIR, 'staticfiles')
-STATIC_URL = '/static/'
+STATIC_ROOT = os.path.join(BASE_DIR, 'static')
 
 # Extra places for collectstatic to find static files.
-STATICFILES_DIRS = (
-    os.path.join(BASE_DIR, 'static'),
-)
+#STATICFILES_DIRS = (
+#    os.path.join(os.path.normpath(BASE_DIR), "static"),
+
+#)
